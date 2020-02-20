@@ -1,0 +1,23 @@
+shared:
+    image: node:12
+
+jobs:
+    main:
+        requires: [~pr, ~commit]
+        steps:
+            - step1:  sleep 2 && echo ok
+
+    fan1:
+        requires: main
+        steps:
+            - step1:  sleep 2 && echo ok
+
+    fan2:
+        requires: main
+        steps:
+            - step1:  sleep 2 && echo ok
+
+    fan10:
+        requires: main
+        steps:
+            - step1: sleep 2 && echo ok
